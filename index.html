@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ぷろしょのサイト</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaQuery.css">
+  <!-- Twitter Card -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@sin2cos2_1">
+  <meta property="og:title" content="ぷろしょのサイト">
+  <meta property="og:description" content="簡単なJavaScriptまでを使用したぷろしょのサイトです。">
+  <meta property="og:image"
+    content="https://raw.githubusercontent.com/progshoshinsha/ProshoSite4/main/twitterCardImage.png">
+  <!-- Google Icon -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+  <!-- font awesome Icon -->
+  <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <section class="title">
+    <h1>ぷろしょのサイト</h1>
+    <p>↓</p>
+  </section>
+
+
+  <header>
+    <nav class="container pcMenu">
+      <ul>
+        <a href="#about">
+          <li>ABOUT</li>
+        </a>
+        <a href="#skill">
+          <li>SKILL</li>
+        </a>
+        <a href="#works">
+          <li>WORKS</li>
+        </a>
+        <a href="#kyozai">
+          <li>KYOZAI</li>
+        </a>
+      </ul>
+    </nav>
+
+    <button class="spMenuButton">
+      <span class="material-symbols-outlined">
+        menu
+      </span>
+    </button>
+    <div class="humburgerMenu hidden">
+      <div class="spMenuMask"></div>
+      <nav class="spMenuList">
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#kyozai">KYOZAI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <section id="about">
+        <h2>ABOUT</h2>
+        <div class="contents fadeInAnimation">
+          <img src="img/character_program_happy.png" alt="キラキラプログラミング君">
+          <div>
+            <h3>こんにちは。<br class="brMedia br500">プログラミング初心者です。</h3>
+            <p>福岡県出身の21歳、大学２年生。
+              <br class="br440">地元で就職すると旅行とか自由に動けなくなるのかな…と思い、「場所に縛られない働き方」を求めて、Web制作の勉強中です。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skill">
+        <h2>SKILL</h2>
+        <div class="contents fadeInAnimation">
+          <ul>
+            <li>
+              <i class="fa-brands fa-html5 skillIcon"></i>
+              <p>HTML</p>
+            </li>
+            <li>
+              <i class="fa-brands fa-css3 skillIcon"></i>
+              <p>CSS</p>
+            </li>
+            <li>
+              <i class="fa-brands fa-js skillIcon"></i>
+              <p>JavaScript</p>
+            </li>
+          </ul>
+          <p>以上言語でのコーディングをすることができます。レスポンシブも対応可能です。
+            <br>エディタはVisual Studio Codeを使用しています。
+          </p>
+        </div>
+      </section>
+
+      <section id="works">
+        <h2>WORKS</h2>
+        <div class="contents">
+          <!-- これまでのぷろしょのサイトの紹介。偶奇に分けて左右からスライドさせる。
+          各作品の画像を押したらモーダルウィンドウにて作品紹介をする。ハイパーリンクなどはJAvaScriptで管理できるば良い。 -->
+          <p>これまでの「ぷろしょのサイト」を紹介します。</p>
+          <ul class="proshoSiteList">
+
+            <li class="proshoSiteContainer fadeInAnimation">
+              <button><img class="modalOpen" src="img/prosho_site_1_img.png" alt="「ぷろしょのサイト１」の画像"></button>
+              <div class="proshoSiteText">
+                <h3>1.HTML/CSS基本編</h3>
+                <p class="proshoSiteInfoText">HTML/CSS基本編終了時点で制作したサイトです。</p>
+              </div>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  ぷろしょのサイト１
+                </h4>
+                <p class="workInfo">
+                  HTML/CSSの基本編を終了した時点で制作した作品です。ul, liやborderなどの練習をしています。progateとドットインストールの欄にはハイパーリンクが仕込んであります。
+                </p>
+                <p class="createdDate">2023年8月31日(30分)</p>
+                <a class="link" href="https://progshoshinsha.github.io/ProshoSite1/"></a>
+              </div>
+            </li>
+
+            <li class="proshoSiteContainer fadeInAnimation">
+              <button><img class="modalOpen" src="img/prosho_site_2_img.png" alt="「ぷろしょのサイト２」の画像"></button>
+              <div class="proshoSiteText">
+                <h3>2.フレックスボックス編</h3>
+                <p class="proshoSiteInfoText">フレックスボックス編終了時点で制作したサイトです。</p>
+              </div>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  ぷろしょのサイト２
+                </h4>
+                <p class="workInfo">
+                  フレックスボックスを用いて複雑なレイアウトの練習をした作品です。制作したパソコンのモニタに対して幅と高さを100%で作っているので、見るものによっては表示が大変なことになります。
+                </p>
+                <p class="createdDate">2023年9月2日(40分)</p>
+                <a class="link" href="https://progshoshinsha.github.io/ProshoSite2/"></a>
+              </div>
+            </li>
+            <li class="proshoSiteContainer fadeInAnimation">
+              <button><img class="modalOpen" src="img/prosho_site_3_img.png" alt="「ぷろしょのサイト３」の画像"></button>
+              <div class="proshoSiteText">
+                <h3>3.HTML/CSS終了編</h3>
+                <p class="proshoSiteInfoText">HTML/CSS編終了時点で制作したサイトです。</p>
+              </div>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  ぷろしょのサイト３
+                </h4>
+                <p class="workInfo">
+                  HTML/CSSの全過程を終了した時点で制作した作品です。フレックスはもちろんsectionやnavなども用いた作品になっています。
+                </p>
+                <p class="createdDate">2023年9月8日(3時間)</p>
+                <a class="link" href="https://progshoshinsha.github.io/ProshoSite3/"></a>
+              </div>
+            </li>
+            <li class="proshoSiteContainer fadeInAnimation">
+              <button><img class="modalOpen" src="img/prosho_site_4_img.png" alt="「ぷろしょのサイト４」の画像"></button>
+              <div class="proshoSiteText">
+                <h3>4.JavaScript終了編</h3>
+                <p class="proshoSiteInfoText">JavaScript編終了時点で制作したサイトです。</p>
+              </div>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  ぷろしょのサイト４
+                </h4>
+                <p class="workInfo">
+                  JavaScript編を終了した時点で制作した作品です。スクロールに関する動きやモーダルウィンドウ、スマホではハンバーガーメニューを実装しました。今見ているこのサイトです。
+                </p>
+                <p class="createdDate">2023年10月10日～</p>
+                <a class="link" href="index.html"></a>
+              </div>
+            </li>
+          </ul>
+          <!-- その他の作品を紹介する。全体的に小さく表示させ、上からふわっと表示させる。これも同様に画像クリックで紹介ウィンドウが表示させる。ハイパーリンクについても同様。 -->
+          <p>他にも以下のような作品を制作してきました。</p>
+          <ul class="otherWorksList fadeInAnimation">
+            <li class="otherWorkContainer">
+              <h3>PROSHO CAROUSEL</h3>
+              <button><img class="modalOpen" src="img/proshoCrousel_img.png" alt="「PROSHO CAROUSEL」の画像"></button>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  PROSHO CAROUSEL
+                </h4>
+                <p class="workInfo">
+                  JavaScriptでカルーセルを学んだ時に制作した作品です。スマホではハンバーガーメニューも実装しています。カルーセルを作ることが目的なので内容はありません。
+                </p>
+                <p class="createdDate">2023年9月8日</p>
+                <a class="link" href="https://progshoshinsha.github.io/PROSHO_CAROUSEL/"></a>
+              </div>
+            </li>
+            <li class="otherWorkContainer">
+              <h3>じゃんけんをしよう</h3>
+              <button><img class="modalOpen" src="img/janken_img.png" alt="「じゃんけんをしよう」の画像"></button>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  じゃんけんをしよう
+                </h4>
+                <p class="workInfo">
+                  ランダム関数と動的にimgのsrc属性を取得させる練習をした作品です。爆速でじゃんけんができます。ぜひ遊んでみてください。
+                </p>
+                <p class="createdDate">2023年9月8日</p>
+                <a class="link" href="https://progshoshinsha.github.io/Janken/"></a>
+              </div>
+            </li>
+            <li class="otherWorkContainer">
+              <h3>Scrooool</h3>
+              <button><img class="modalOpen" src="img/scrooool_img.png" alt="「Scrooool」の画像"></button>
+              <div class="modalText">
+                <h4 class="workTitle">
+                  Scrooool
+                </h4>
+                <p class="workInfo">
+                  スクロールでふわっと出てくるとメニュ―をクリックするとそこまでスクロールする機能の練習をした作品です。
+                </p>
+                <p class="createdDate">2023年9月8日</p>
+                <a class="link" href="https://progshoshinsha.github.io/Scrooool/"></a>
+              </div>
+            </li>
+          </ul>
+
+          <!-- <p>模写練習作品はこちら</p> -->
+        </div>
+
+        <div class="modalWindow hidden">
+          <div class="mask modalClose"></div>
+
+          <div class="modalContainer">
+
+            <header>
+              <h4 class="modalTitle">タイトル</h4>
+              <button>
+                <span class="material-symbols-outlined modalClose">close</span>
+              </button>
+            </header>
+
+            <div class="modalContents">
+              <a class="modalLinkImg" href=""><img src="" alt=""></a>
+              <dl>
+                <dt>作品紹介</dt>
+                <dd class="modalInfo">作品説明文</dd>
+                <dt>制作期間</dt>
+                <dd class="modalDate">制作期間</dd>
+                <dt>リンク</dt>
+                <dd><a class="modalLink" href="">サイトへ行く</a></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="kyozai">
+        <h2>KYOZAI</h2>
+        <div class="contents">
+          <p>学習教材として以下のものを使用しています。</p>
+          <dl class="fadeInAnimation">
+            <dt>ドットインストール</dt>
+            <dd>こちらをメインにプログラミング学習を進めています。</dd>
+            <dt>CodeJump</dt>
+            <dd>模写練習をするときに主に使用しています。</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#kyozai">KYOZAI</a></li>
+          <li><a href="https://twitter.com/progshoshinsha"><i class="fa-brands fa-twitter"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <small>@progshoshinsha</small>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

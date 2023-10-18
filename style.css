@@ -1,0 +1,525 @@
+@charset "utf-8";
+
+/* CSSリセット */
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+/* フェードインアニメーション */
+@keyframes titleFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInAnimation {
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+
+.fadeInAnimation.show {
+  opacity: 1;
+  transform: none !important;
+  pointer-events: all;
+}
+
+/* ぷろしょのサイト アニメーション */
+#works .proshoSiteContainer.fadeInAnimation:nth-child(odd) {
+  transform: translateX(50px);
+}
+
+#works .proshoSiteContainer.fadeInAnimation:nth-child(even) {
+  transform: translateX(-50px);
+}
+
+/* 過去作 アニメーション */
+#works .otherWorksList.fadeInAnimation {
+  transform: translateY(-10px);
+}
+
+/* 学習教材　アニメーション */
+#kyozai dl.fadeInAnimation {
+  transform: translateY(50px);
+}
+
+/* サイト内容 */
+body {
+  background: white;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* タイトル */
+.title {
+  height: 100vh;
+  background: #333;
+  color: white;
+  position: relative;
+}
+
+.title h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title p {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+}
+
+/* タイトル アニメーション */
+.title h1,
+.title p {
+  animation: titleFadeIn 3s;
+}
+
+/* ヘッダー */
+header {
+  background: #bbb;
+  /* top 0 に来たら固定 */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  line-height: 32px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+header a {
+  width: 100%;
+  color: #000;
+  transition: .3s;
+  line-height: 32px;
+}
+
+header .pcMenu a:hover {
+  background: #333;
+  color: white;
+}
+
+.spMenuButton {
+  display: none;
+  margin: 0 16px 0 auto;
+}
+
+.humburgerMenu.hidden {
+  display: none;
+}
+
+.humburgerMenu .spMenuMask {
+  background: rgba(20, 20, 20, .7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.humburgerMenu .spMenuList {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+.spMenuList ul {
+  display: block;
+  padding: 24px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.spMenuList li,
+.spMenuList a {
+  transition: .3s;
+}
+
+.spMenuList li:hover {
+  background: #000;
+}
+.spMenuList a:hover {
+  color: white;
+}
+
+/* メイン 共通 */
+main section {
+  margin-top: 100px;
+  color: #222;
+}
+
+main h2 {
+  text-align: center;
+  border-bottom: 2px solid #222;
+  padding-bottom: 4px;
+}
+
+main .contents {
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+/* メイン about */
+#about .contents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#about h3 {
+  font-weight: normal;
+}
+
+#about p {
+  margin-top: 8px;
+}
+
+/* メイン skill */
+#skill ul {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#skill li {
+  width: 70%;
+  padding: 16px 0;
+}
+
+#skill li>p {
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+#skill li+li {
+  border-left: 2px solid #222;
+}
+
+#skill .skillIcon {
+  font-size: 48px;
+}
+
+#skill .contents>p {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+/* メイン works 共通*/
+#works .contents>p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+#works ul {
+  margin: 8px 0 40px 0;
+}
+
+#works .contents button {
+  transition: .3s;
+  overflow: hidden;
+}
+
+#works .contents button:hover {
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, .4);
+}
+
+/* メイン これまでのぷろしょのサイト */
+#works .proshoSiteContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 作品の偶数番目は左右逆にする */
+.proshoSiteContainer:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* 作品間の余白 */
+.proshoSiteContainer+.proshoSiteContainer {
+  margin-top: 40px;
+}
+
+#works .proshoSiteContainer button {
+  width: 60%;
+  height: 100%;
+  flex: 4;
+}
+
+#works .proshoSiteContainer img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #222;
+  overflow: hidden;
+}
+
+#works .proshoSiteText {
+  flex: 5;
+}
+
+#works .proshoSiteText h3 {
+  background: #333;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px 4px 0 0;
+}
+
+#works .proshoSiteInfoText {
+  font-size: 14px;
+  background: lightgray;
+  padding: 8px;
+  border-radius: 0 0 4px 4px;
+}
+
+#works .modalText {
+  display: none;
+}
+
+/* メイン その他の過去作 */
+#works .otherWorksList {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+#works .otherWorkContainer {
+  width: calc((100% - 12px) / 4);
+  display: flex;
+  flex-direction: column;
+}
+
+#works .otherWorkContainer h3 {
+  font-weight: normal;
+  font-size: 10px;
+}
+
+#works .otherWorkContainer img {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+/* メイン 作品紹介のモーダルウィンドウ */
+/* 付け加えるクラス */
+.modalWindow.hidden {
+  display: none;
+}
+
+body.notScroll {
+  overflow: hidden;
+}
+
+/* ウィンドウについてのマークアップ */
+.modalWindow .mask {
+  background: rgba(20, 20, 20, .7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.modalWindow .modalContainer {
+  background: white;
+  padding: 16px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+
+.modalContainer header {
+  background: #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: .5;
+}
+
+.modalContainer h4 {
+  margin-left: 16px;
+}
+
+.modalContainer button .modalClose {
+  font-size: 30px;
+}
+
+.modalContents {
+  overflow-y: scroll;
+  margin-top: 8px;
+  flex: 9.5;
+  padding: 0 8px 16px 0;
+}
+
+.modalContents::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modalContents::-webkit-scrollbar-button {
+  background-color: #ccc;
+}
+
+.modalContents::-webkit-scrollbar-thumb {
+  background-color: #03666d;
+}
+
+.modalContents img {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.modalContents dl {
+  text-align: left;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+.modalContents dt {
+  border-bottom: 1px solid #000;
+}
+
+.modalContents dt:not(:first-child) {
+  margin-top: 24px;
+}
+
+.modalContents dd {
+  margin-top: 8px;
+  padding-left: 8px;
+}
+
+#kyozai .contents {
+  margin-top: 16px;
+  padding: 0;
+}
+
+#kyozai p {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+#kyozai dt {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+  padding: 0 0 4px 8px;
+}
+
+#kyozai dd {
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+footer {
+  background: #333;
+  padding-top: 40px;
+  margin-top: 200px;
+}
+
+footer .container {
+  padding: 0 32px;
+}
+
+footer a {
+  color: white;
+  font-size: 14px;
+}
+
+footer li {
+  margin-bottom: 8px;
+  padding-left: 24px;
+  position: relative;
+}
+
+footer li a:not(last-child):hover {
+  opacity: .7;
+}
+
+footer li:before {
+  content: "";
+  position: absolute;
+  top: .35em;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+}
+
+footer .fa-twitter {
+  font-size: 20px;
+}
+
+footer .fa-twitter:hover {
+  color: skyblue;
+}
+
+footer small {
+  background: #000;
+  display: block;
+  margin-top: 40px;
+  padding: 8px 0;
+  text-align: center;
+  color: white;
+}

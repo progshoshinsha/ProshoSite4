@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+.brMedia {
+  display: none;
+}
+
+@media (max-width:500px) {
+  header {
+    height: 40px;
+  }
+
+  header a {
+    line-height: 40px;
+  }
+
+  main .contents {
+    padding: 8px;
+  }
+
+  #about img {
+    width: 140px;
+  }
+
+  #about h3 {
+    font-size: 18px;
+  }
+
+  .brMedia.br500 {
+    display: block;
+  }
+
+  #works .proshoSiteContainer button {
+    width: 80%;
+  }
+
+  #works .proshoSiteText h3 {
+    font-size: 16px;
+  }
+
+  #works .otherWorkContainer h3 {
+    font-size: 8px
+  }
+
+  #study dt {
+    font-size: 16px;
+  }
+
+  #study dd {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:440px) {
+  .title h1 {
+    font-size: 16px;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  header .pcMenu {
+    display: none;
+  }
+
+  .spMenuButton {
+    display: block;
+  }
+
+  .br440 {
+    display: none;
+  }
+
+  #about .contents {
+    display: block;
+  }
+
+  #about .contents div {
+    margin-top: 16px;
+  }
+
+  #about img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #about h3 {
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 14px;
+  }
+
+  #works .proshoSiteInfoText {
+    font-size: 12px;
+  }
+
+
+}
+
+@media (max-width:390px) {
+  #works .proshoSiteContainer {
+    flex-direction: column-reverse;
+  }
+
+  .proshoSiteContainer+.proshoSiteContainer {
+    margin-top: 56px;
+  }
+
+  #works .proshoSiteText {
+    width: 100%;
+  }
+
+  #works .proshoSiteContainer button {
+    width: 100%;
+  }
+
+  #works .otherWorkContainer {
+    width: calc((100% - 8px) / 3);
+  }
+}
+
+@media (max-width:360px) {
+  .modalWindow .modalTitle {
+    font-size: 14px;
+  }
+
+  .modalWindow dd {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:300px) {
+  #about h3 {
+    font-size: 16px;
+  }
+
+  #skill li>p {
+    margin-top: 8px;
+  }
+
+  #skill .skillIcon {
+    font-size: 32px;
+  }
+
+  #works .otherWorkContainer h3 {
+    display: none;
+  }
+
+
+}
