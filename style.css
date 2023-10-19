@@ -48,14 +48,14 @@ button {
 
 .fadeInAnimation {
   opacity: 0;
-  display: none !important; 
+  display: none;
   transition: 1s;
   pointer-events: none;
 }
 
 .fadeInAnimation.show {
   opacity: 1;
-  display: block !important;
+  display: block;
   transform: none !important;
   pointer-events: all;
 }
@@ -189,6 +189,7 @@ header .pcMenu a:hover {
 .spMenuList li:hover {
   background: #000;
 }
+
 .spMenuList a:hover {
   color: white;
 }
@@ -279,6 +280,10 @@ main .contents {
 }
 
 /* メイン これまでのぷろしょのサイト */
+#works .proshoSiteList {
+  overflow: hidden;
+}
+
 #works .proshoSiteContainer {
   display: flex;
   align-items: center;
