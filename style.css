@@ -278,10 +278,6 @@ main .contents {
 }
 
 /* メイン これまでのぷろしょのサイト */
-#works .proshoSiteList {
-  overflow: hidden;
-}
-
 #works .proshoSiteContainer {
   display: flex;
   align-items: center;
