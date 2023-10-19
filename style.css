@@ -48,14 +48,14 @@ button {
 
 .fadeInAnimation {
   opacity: 0;
-  display: none;
+  display: none !important; 
   transition: 1s;
   pointer-events: none;
 }
 
 .fadeInAnimation.show {
   opacity: 1;
-  display: block;
+  display: block !important;
   transform: none !important;
   pointer-events: all;
 }
